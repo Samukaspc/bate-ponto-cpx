@@ -9,7 +9,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon seu-arquivo-principal.js",
-    "start-dev": "nodemon index.js"
+    "start-dev": "nodemon index.js",
+    "vercel-build" : "npx prisma migrate deplay"
   },
   "keywords": [],
   "author": "",
