@@ -1,5 +1,3 @@
-require('dotenv').config();
-
 const express = require('express');
 const cors = require('cors');
 const robo = require('./buscarBateponto/index');
@@ -19,7 +17,7 @@ app.post('/api/robo', async (req, res) => {
     }
 });
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3001;  // Usando a porta 3001 se process.env.PORT não estiver definido
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
 });
