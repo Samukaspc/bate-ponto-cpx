@@ -8,6 +8,9 @@ const app = express();
 
 app.use(express.json());
 app.use(cors()); 
+app.get('/', (req, res) => {
+    res.send('Bem-vindo à API do Robô!');
+});
 
 app.post('/api/robo', async (req, res) => {
     const { usuario, dataInicio, dataFinal, grupamento } = req.body;
