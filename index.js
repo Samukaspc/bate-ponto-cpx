@@ -20,8 +20,10 @@ app.post('/api/robo', async (req, res) => {
         res.json({ message: 'Dados recebidos com sucesso!', dados: dadosDaTabela });
     } catch (error) {
         console.error('Erro ao executar o script Puppeteer:', error);
-        res.status(500).json({ error: 'Erro ao executar o script Puppeteer' });
+        res.status(500).json({ error: `Erro ao executar o script Puppeteer: ${error.message}` });
     }
+    
+    
 });
 
 const PORT = process.env.PORT;
