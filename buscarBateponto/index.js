@@ -1,4 +1,4 @@
-const puppeteer = require('puppeteer-core-render');
+const puppeteer = require('puppeteer');
 
 async function robo(usuario, dataInicio, dataFinal, grupamento) {
 
