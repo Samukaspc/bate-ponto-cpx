@@ -7,7 +7,14 @@ const robo = require('./buscarBateponto');
 const app = express();
 
 app.use(express.json());
-app.use(cors()); 
+
+app.use(cors({
+    origin: 'http://localhost:3001',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true,
+    optionsSuccessStatus: 204,
+}));
+
 app.get('/', (req, res) => {
     res.send('Bem-vindo à API do Robô!');
 });
@@ -22,8 +29,6 @@ app.post('/api/robo', async (req, res) => {
         console.error('Erro ao executar o script Puppeteer:', error);
         res.status(500).json({ error: `Erro ao executar o script Puppeteer: ${error.message}` });
     }
-    
-    
 });
 
 const PORT = process.env.PORT;
