@@ -2,7 +2,7 @@ const puppeteer = require('puppeteer');
 
 async function robo(usuario, dataInicio, dataFinal, grupamento) {
 
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({ headless: "new" });
     const page = await browser.newPage();
     const initialUrl = 'https://policia.complexorj.com.br/rpdatas.php';
     await page.goto(initialUrl);
