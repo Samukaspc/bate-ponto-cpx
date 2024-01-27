@@ -7,9 +7,8 @@
     "node": "20.9.0"
   },
   "scripts": {
-    "build": "yarn add puppeteer",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon seu-arquivo-principal.js",
+    "start": "npx puppeteer browsers install chrome && nodemon seu-arquivo-principal.js",
     "start-dev": "nodemon index.js",
     "vercel-build": "npx prisma migrate deploy"
   },
