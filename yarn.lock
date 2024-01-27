@@ -1052,7 +1052,7 @@ puppeteer-core@21.9.0:
 
 puppeteer@^21.9.0:
   version "21.9.0"
-  resolved "https://registry.npmjs.org/puppeteer/-/puppeteer-21.9.0.tgz"
+  resolved "https://registry.yarnpkg.com/puppeteer/-/puppeteer-21.9.0.tgz#ff6cb321f6d43c1f39ba74bbdfccf2b5ef0121af"
   integrity sha512-vcLR81Rp+MBrgqhiXZfpwEBbyKTa88Hd+8Al3+emWzcJb9evLLSfUYli0QUqhofPFrXsO2A/dAF9OunyOivL6w==
   dependencies:
     "@puppeteer/browsers" "1.9.1"
